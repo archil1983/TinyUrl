@@ -1,0 +1,23 @@
+{
+  "properties": [
+    {
+      "name": "cassandra.contactPoints",
+      "type": "java.lang.String",
+      "description": "Description for cassandra.contactPoints."
+    },
+    {
+      "name": "cassandra.port",
+      "type": "java.lang.String",
+      "description": "Description for cassandra.port."
+    },
+    {
+      "name": "cassandra.create.table",
+      "type": "java.lang.String",
+      "description": "Description for cassandra.create.table."
+    },
+    {
+      "name": "cassandra.create.keyspace",
+      "type": "java.lang.String",
+      "description": "Description for cassandra.create.keyspace."
+    }
+  ] }

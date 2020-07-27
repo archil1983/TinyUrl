@@ -1,0 +1,26 @@
+version: '2.2'
+
+
+services:
+  cass:
+    image: cassandra:latest
+    container_name: cassandra
+    ports:
+      - "9042:9042"
+    restart: always
+    healthcheck:
+      test: ["CMD", "cqlsh", "-u cassandra", "-p cassandra" ,"-e describe keyspaces"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  app:
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    links:
+      - cass
+    depends_on:
+      cass:
+        condition: service_healthy

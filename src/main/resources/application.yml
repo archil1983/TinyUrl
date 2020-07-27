@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+cassandra:
+  contactPoints: cass
+#  contactPoints: 127.0.0.1
+  port: 9042
+  keyspace: "QUIZ"
+  table: "TINY_URL"
+  ttl: 600
+  create:
+    keyspace: "CREATE KEYSPACE IF NOT EXISTS ${cassandra.keyspace} WITH replication = {'class': 'SimpleStrategy','replication_factor' : 1} AND durable_writes = true"
+    table: "CREATE TABLE IF NOT EXISTS ${cassandra.keyspace}.${cassandra.table}( id text, tiny_url_path text, full_url  text,    PRIMARY KEY (id))"
