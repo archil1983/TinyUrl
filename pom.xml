@@ -14,7 +14,7 @@
         <docker.image.prefix>quiz</docker.image.prefix>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring.version>2.0.7.RELEASE</spring.version>
+        <spring.version>2.5.12</spring.version>
         <c360.common.configuration>RELEASE-SNAPSHOT</c360.common.configuration>
         <skip.integration.tests>false</skip.integration.tests>
         <skip.unit.tests>false</skip.unit.tests>
